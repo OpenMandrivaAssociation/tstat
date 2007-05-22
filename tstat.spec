@@ -18,7 +18,7 @@ License: GPL
 Group: Monitoring
 Url: http://tstat.tlc.polito.it/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Buildrequires: %{mklibname pcap}-devel %{mklibname rrdtool}-devel
+Buildrequires: %{mklibname pcap0}-devel %{mklibname rrdtool}-devel
 requires: rrdtool
 prereq:		rpm-helper
 
@@ -72,7 +72,7 @@ cp -v %{SOURCE2} $RPM_BUILD_ROOT/var/www/cgi-bin/%{name}_rrd.cgi
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-post
+%post
 %_post_service tstat
 
 %post -n %{name}-www
