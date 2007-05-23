@@ -1,6 +1,6 @@
 %define name tstat
 %define version 1.01
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Sniffer able to provide several insight on the traffic patterns
 Name: %{name}
@@ -39,7 +39,7 @@ please adjust: %{_sysconfdir}/tstat/global.conf
 %package -n %{name}-www
 Summary:        Provides the CGI file for the tstat web interface
 Group:          Networking/WWW
-Requires: apache perl-CGI
+Requires: apache perl-CGI apache-mod_fastcgi perl-DateManip
 
 %description -n %{name}-www
 Provides the CGI file for the tstat web interface
