@@ -17,7 +17,6 @@ Patch1: tstat.h.patch.bz2
 License: GPL
 Group: Monitoring
 Url: http://tstat.tlc.polito.it/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Buildrequires: %{mklibname pcap0}-devel %{mklibname rrdtool2}-devel
 requires: rrdtool
 prereq:		rpm-helper
