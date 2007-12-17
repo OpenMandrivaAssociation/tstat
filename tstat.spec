@@ -19,7 +19,7 @@ Group: Monitoring
 Url: http://tstat.tlc.polito.it/
 Buildrequires: %{mklibname pcap0}-devel %{mklibname rrdtool2}-devel
 requires: rrdtool
-prereq:		rpm-helper
+Requires(post,preun):		rpm-helper
 
 %description
 The lack of automatic tools able to produce statistical data from network
