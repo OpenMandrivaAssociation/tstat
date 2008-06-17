@@ -1,6 +1,6 @@
 %define name tstat
 %define version 1.01
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: Sniffer able to provide several insight on the traffic patterns
 Name: %{name}
