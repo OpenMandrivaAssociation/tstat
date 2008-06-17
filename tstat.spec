@@ -17,10 +17,11 @@ Patch1: tstat.h.patch.bz2
 License: GPL
 Group: Monitoring
 Url: http://tstat.tlc.polito.it/
+Buildrequires: pcap-devel rrdtool-devel
+Requires: rrdtool
+Requires(post): rpm-helper
+Requires(preun): rpm-helper
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Buildrequires: %{mklibname pcap0}-devel %{mklibname rrdtool2}-devel
-requires: rrdtool
-Requires(post,preun):		rpm-helper
 
 %description
 The lack of automatic tools able to produce statistical data from network
