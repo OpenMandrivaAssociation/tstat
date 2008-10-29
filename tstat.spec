@@ -1,6 +1,6 @@
 %define name tstat
 %define version 1.01
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary: Sniffer able to provide several insight on the traffic patterns
 Name: %{name}
@@ -21,7 +21,7 @@ Buildrequires: pcap-devel rrdtool-devel
 Requires: rrdtool
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The lack of automatic tools able to produce statistical data from network
