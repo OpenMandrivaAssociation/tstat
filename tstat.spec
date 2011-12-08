@@ -60,7 +60,7 @@ mkdir -p $RPM_BUILD_ROOT/%{_bindir}
 mkdir -p $RPM_BUILD_ROOT/%{_sysconfdir}/tstat
 mkdir -p $RPM_BUILD_ROOT/%{_initrddir}
 mkdir -p $RPM_BUILD_ROOT/var/lib/%name/rrd_data/localhost
-cp -v $RPM_BUILD_DIR/%name/tstat $RPM_BUILD_ROOT/%{_bindir}/tstat
+cp -v %{_builddir}/%name/tstat $RPM_BUILD_ROOT/%{_bindir}/tstat
 cp -v %{SOURCE4} $RPM_BUILD_ROOT/%{_sysconfdir}/%name/rrd.conf
 cp -v %{SOURCE1} $RPM_BUILD_ROOT/%{_initrddir}/%{name}
 cp -v %{SOURCE3} $RPM_BUILD_ROOT/%{_sysconfdir}/%name/net.conf.sample
