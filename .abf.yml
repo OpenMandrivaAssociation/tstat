@@ -1,7 +1,4 @@
 sources:
-  "tstat-1.01.tar.gz:"	77bceaa4ccba2955d9b3182d81ae1812092209d1
-  "tstat_global.conf:"	1f644eef843643b8fa1ed960ab69c74e0dea78c7
-  "tstat.init:"	033a12e0f060016ea5a2f1de42c63ed91df67ee7
-  "tstat_net.conf:"	9a7c4d8021dfdab6b66adc52b9825fdd0897b93b
-  "tstat_rrd.cgi:"	e92c81dfb4474f644357557cdd88f9aeba165162
-  "tstat_rrd.conf:"	737fbfd4437128b01938d3f17adde6e9973c18ac
+  "tstat-1.01.tar.gz": 77bceaa4ccba2955d9b3182d81ae1812092209d1
+  "tstat-Makefile.in.patch.bz2": ff886240399b5612cbb00803c0fb40633d120d3e
+  "tstat.h.patch.bz2": 79dff42cea66363f956f4423a369e3715bacebf7

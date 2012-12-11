@@ -60,7 +60,7 @@ mkdir -p $RPM_BUILD_ROOT/%{_bindir}
 mkdir -p $RPM_BUILD_ROOT/%{_sysconfdir}/tstat
 mkdir -p $RPM_BUILD_ROOT/%{_initrddir}
 mkdir -p $RPM_BUILD_ROOT/var/lib/%name/rrd_data/localhost
-cp -v %{_builddir}/%name/tstat $RPM_BUILD_ROOT/%{_bindir}/tstat
+cp -v $RPM_BUILD_DIR/%name/tstat $RPM_BUILD_ROOT/%{_bindir}/tstat
 cp -v %{SOURCE4} $RPM_BUILD_ROOT/%{_sysconfdir}/%name/rrd.conf
 cp -v %{SOURCE1} $RPM_BUILD_ROOT/%{_initrddir}/%{name}
 cp -v %{SOURCE3} $RPM_BUILD_ROOT/%{_sysconfdir}/%name/net.conf.sample
@@ -102,3 +102,41 @@ chown -R apache.apache /var/www/html/rrd_images
 %doc docs/CHANGES docs/README.RRDtool
 %attr(755,apache,apache) /var/www/html/rrd_images
 %attr(755,root,root) /var/www/cgi-bin/tstat_rrd.cgi
+
+
+%changelog
+* Sun Sep 20 2009 Thierry Vignaud <tvignaud@mandriva.com> 1.01-5mdv2010.0
++ Revision: 445565
+- rebuild
+
+* Wed Oct 29 2008 Oden Eriksson <oeriksson@mandriva.com> 1.01-4mdv2009.1
++ Revision: 298444
+- rebuilt against libpcap-1.0.0
+
+* Tue Jun 17 2008 Oden Eriksson <oeriksson@mandriva.com> 1.01-3mdv2009.0
++ Revision: 222544
+- fix deps
+- rebuilt against new rrdtool-devel
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - fix prereq
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Wed May 23 2007 Antoine Ginies <aginies@mandriva.com> 1.01-2mdv2008.0
++ Revision: 30133
+- add requires apache-mod_fastcgi and perl-DateManip for tstat-www package
+
+* Tue May 22 2007 Antoine Ginies <aginies@mandriva.com> 1.01-1mdv2008.0
++ Revision: 29788
+- fix rrdtool2-devel buildrequires
+- fix typo, and adjust buildrequires
+- use %%mkrel macro
+- Import tstat
+
+
+
+* Thu Dec  8 2005  <aginies@mandriva.com> 1.01-1mdk
+- first release
