@@ -1,0 +1,12 @@
+[Unit]
+Description=Sniffer able to provide several insights on the traffic patterns
+After=syslog.target network.target
+Wants=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/tstat/global.conf
+ExecStart=/usr/bin/tstat -S -i${tstat_if} -r/var/lib/tstat/rrd_data/${tstat_name} -R${tstat_rrdconf} -N${tstat_netconf} -l
+
+[Install]
+WantedBy=multi-user.target
