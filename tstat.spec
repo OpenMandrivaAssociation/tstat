@@ -1,7 +1,7 @@
 Summary: Sniffer able to provide several insights on the traffic patterns
 Name: tstat
 Version: 1.01
-Release: 8
+Release: 9
 Source0: http://tstat.tlc.polito.it/download/%{name}-%{version}.tar.gz
 Source1: tstat.service
 Source2: tstat_rrd.cgi
