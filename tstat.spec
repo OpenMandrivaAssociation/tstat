@@ -12,7 +12,7 @@ Patch0: tstat-Makefile.in.patch.bz2
 Patch1: tstat.h.patch.bz2
 License: GPL
 Group: Monitoring
-Url: http://tstat.tlc.polito.it/
+Url: https://tstat.tlc.polito.it/
 Buildrequires: pcap-devel rrdtool-devel
 Requires: rrdtool
 
