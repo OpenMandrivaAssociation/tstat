@@ -13,6 +13,11 @@ Patch1: tstat.h.patch.bz2
 License: GPL
 Group: Monitoring
 Url: https://tstat.tlc.polito.it/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires: pcap-devel rrdtool-devel
 Requires: rrdtool
 
